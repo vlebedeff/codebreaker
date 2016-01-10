@@ -21,7 +21,7 @@ Given /^I start a new game$/ do
 end
 
 Then /^I should see "([^"]*)"$/ do |message|
-  out.messages.should include(message)
+  expect(out.messages).to include(message)
 end
 
 Given /^the secret code is "([^"]*)"$/ do |secret|
@@ -34,5 +34,5 @@ When(/^I guess "([^"]*)"$/) do |guess|
 end
 
 Then(/^the mark should be "([^"]*)"$/) do |mark|
-  out.messages.should include(mark)
+  expect(out.messages).to include(mark)
 end
